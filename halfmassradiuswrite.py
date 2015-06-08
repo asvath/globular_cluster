@@ -28,7 +28,7 @@ def hmrplots(numberoffiles,nameoflist):
 			ycm=np.average(y,weights=m)
 			zcm=np.average(z,weights=m)
 			r2=(x-xcm)**2+(y-ycm)**2+(z-zcm)**2
-#			r2=x**2+y**2+z**2
+			#r2=x**2+y**2+z**2
 			l=len(r2)
 			'''
 			print('%d %g %g %g %g' % (i,np.median(m[:l/100]),
@@ -37,8 +37,10 @@ def hmrplots(numberoffiles,nameoflist):
 						  np.median(m)))
 						  '''
 
-			one=np.sqrt(np.median(r2[:l/100]))
-			two=np.sqrt(np.median(r2[l/100:2*l/100]))
+			#one=np.sqrt(np.median(r2[:l/100]))
+			#two=np.sqrt(np.median(r2[l/100:2*l/100]))
+			one=np.sqrt(np.median(r2[:l/200]))
+			two=np.sqrt(np.median(r2[l/200:l/100]))
 			three=np.sqrt(np.median(r2[l*4574/100000:l*5574/100000]))
 			rmedian=np.sqrt(np.median(r2))
 			massy=np.sum(m)
